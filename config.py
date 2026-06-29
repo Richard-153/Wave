@@ -7,9 +7,7 @@ models_dir = 'models'
 losses_dir = 'losses'
 
 # path to the data directories
-#data_dir = '/home/vision/users/cgh/denoising/unet12/unet12_zhuanyi/FLIR'
-#data_dir = '/home/vision/users/cgh/denoising/unet12/unet+att+mask+wavelet/BPD'
-data_dir = '/home/vision/users/cgh/denoising/unet12/unet12_xiaorong/DV'
+data_dir = 'path'
 train_dir = 'train'
 test_dir = 'test'
 val_dir = 'val'
@@ -29,7 +27,7 @@ train_percentage = 0.8
 
 resume = not True  # False for trainig from scratch, True for loading a previously saved weight
 #data_weight = 'trained_weights.pth'
-ckpt='/home/vision/users/cgh/denoising/unet12/unet12_xiaorong/models/model200.pth' # model file path to load the weights from, only useful when resume is True
+ckpt='path' # model file path to load the weights from, only useful when resume is True
 lr = 1e-5          # learning rate
 epochs = 200       # epochs to train for
 
@@ -38,10 +36,7 @@ batch_size = 2 # try decreasing the batch_size if there is a memory error
 
 # log interval for training and validation
 log_interval = 25
-#test_dir = '/home/vision/users/cgh/denoising/FCSTN3/data/real2/test/input'
 test_dir = os.path.join(data_dir, test_dir, noisy_dir)
-#test_dir = '/home/vision/users/cgh/denoising/FCSTN/data/FLIR/test/input'
-#test_dir = '/home/vision/users/cgh/denoising/unet12/unet12_xiaorong/FLIR960/val/imgs'
 res_dir = 'results'
 test_bs = 2
 
